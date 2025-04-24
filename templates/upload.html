@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en-US">
+<!--<![endif]-->
+
+<head>
+    <title>Breast Cancer</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather:400,700">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <link rel="stylesheet" href="static/css/animate.min.css">
+<style>
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+    <header id="header" class=" navbar-fixed-top">
+			<a class="brand" href="index.html">
+				<img src="static/images/1.jpg" width="200"  height="100"  alt="Logo">
+			</a>
+
+				<nav class="navbar-right hidden-xs">
+<!--					<a href="http://technext.github.io/Creative/fr/index.html" hreflang="fr">FR</a>-->
+<!--          <a class="active" href="http://technext.github.io/Creative/index.html" hreflang="en-US">EN</a>-->
+					<a class="last-child white" href="#contact">about Project</a>
+				</nav>
+        <div class="visible-nav navbar-right visible-xs">
+<!--          <a href="static/fr/index.html" hreflang="fr">FR</a>-->
+<!--          <a class="active" href="index.html" hreflang="en-US">EN</a>-->
+<!--          <a href="#contact">Contact</a>-->
+        </div>
+
+  	</header>
+
+  	<div class="intro white">
+  		<div class="container wow animated fadeInUp">
+<!--	  		<h1 style="-->
+<!--    width: 1181px;-->
+<!--">A Novel Approach to Predict Early Stage of Breast Cancer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;using Deep Learning-->
+<!--        </h1>-->
+<center style="background-color:#2ff0c142">
+ <h3 style="color:white">Classified Image</h3>
+    <img src=" {{url_for('send_image', filename=image_name)}}" style="width:300px;height:300px;"><br>
+
+{% block body %}
+					{% if text == "Breast Cancer" %}
+               <b style="color:red"> {{ text }}</b><br>
+    <p><b style="color:yellow">Remedies of Cancer:</b> Surgery. An operation where doctors cut out cancer tissue.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chemotherapy. Using special medicines to shrink or kill the cancer cells. The drugs can be pills you take or medicines given in your veins, or sometimes both.<br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Hormonal therapy. Blocks cancer cells from getting the hormones they need to grow.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Biological therapy. Works with your body’s immune system to help it fight cancer cells or to control side effects from other cancer treatments.<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Radiation therapy. Using high-energy rays (similar to X-rays) to kill the cancer cells.
+    </p>
+    {% else %}
+        Not Detected
+                {% endif %}
+					{% endblock %}
+</center>
+                <a style="text-decoration: none; display: block; margin: 20px auto; width:500px;" class="btn btn-primary btn-block btn-large" href="#contact" role="button">Predict Another image</a></center>
+
+<!--	  		<p id="office-place" class="office-place">Operating from <strong>Newyork &amp; USA</strong></p>-->
+  		</div><!-- /.container -->
+  	</div><!-- /.intro -->
+
+    <div class="section" id="members">
+        <div class="container">
+            <h2>Breast Cancer</h2>
+            <hr>
+            <p class="lead-creative-banner">About Technologies
+        </p>
+            <div class="row">
+                <div class="col-md-4">
+                    <figure class="wow animated fadeInLeft">
+                        <img class="border-img img-responsive center-block" src="static/images/d.jpg" alt="John" width="280" height="280">
+                    </figure>
+                    <div class="imgcaption">
+                        <strong>Deep <span class="name">Learning</span></strong>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <figure class="wow animated fadeInDown">
+                        <img class="border-img img-responsive center-block" src="static/images/c.jpg" alt="Jan" width="280" height="280" style="height:250px;">
+                    </figure>
+                    <div class="imgcaption">
+                        <strong>CNN<span class="name">Algorithm</span></strong>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <figure class="wow animated fadeInRight">
+                        <img class="border-img img-responsive center-block" src="static/images/p.png" alt="Reza" width="280" height="280" style="height:250px;">
+                    </figure>
+                    <div class="imgcaption">
+                        <strong>Python <span class="name">Language</span></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- members -->
+
+    <div class="section" id="our-info">
+        <div class="container">
+            <h2>What we do</h2>
+            <hr />
+            <div class="row">
+                <div class="col-sm-6 wow animated fadeInLeft">
+                    <figure>
+                        <img class="z-hover img-responsive" src="static/images/2.jpg" alt="Macbook" style="width:600px; height:500px;">
+                    </figure>
+<!--                    <h4>1. Projects</h4>-->
+                    <p class="function-text">            <p class="lead-creative-banner">Classification is the process of identifying and and grouping objects or ideas into predetermined categories.
+        </p>
+ </p>
+                </div>
+                <div class="col-sm-6 wow animated fadeInRight">
+                    <figure>
+                        <img class="z-hover img-responsive" src="static/images/4.jpg" alt="Macbook" style="width:600px; height:500px;">
+                    </figure>
+<!--                    <h4>2.Others</h4>-->
+ <p class="lead-creative-banner">A Novel Approach to Predict Early Stage of Breast Cancer using Deep Learning.
+        </p>               </div>
+            </div>
+        </div>
+    </div><!-- our-info -->
+
+    <div class="section" id="our-service">
+        <div class="container">
+            <h3>Our services</h3>
+            <div class="row">
+                <div class="col-md-3 wow animated zoomIn">
+                    <ul>
+                        <li class="service-list">
+                            <strong>Online Services</strong>
+                        </li>
+                        <li class="service-list">
+                            <strong>Disease classification</strong>
+                        </li>
+                        <li class="service-list">
+                            <strong>Remedies</strong>
+                        </li>
+                        <li class="service-list">
+                            <strong>Illustration</strong>
+                        </li>
+<!--                        <li class="service-list">-->
+<!--                            <strong>Stationery (print)</strong>-->
+<!--                        </li>-->
+                    </ul>
+                </div>
+                <div class="col-md-3 wow animated zoomIn">
+                    <ul>
+                        <li class="service-list">
+                            <strong>About Project</strong>
+                        </li>
+                        <li class="service-list">
+                            <strong>Objective of the Project</strong>
+                        </li>
+                        <li class="service-list">
+                            <strong>ADvantages of Project</strong>
+                        </li>
+                        <li class="service-list">
+                            <strong>Domain Knowledge</strong>
+                        </li>
+<!--                        <li class="service-list">-->
+<!--                            <strong>Stationery (print)</strong>-->
+<!--                        </li>-->
+                    </ul>
+                </div>
+                <div class="col-md-3 wow animated zoomIn">
+                    <ul>
+                        <li class="service-list">
+                            <strong>About Technologies</strong>
+                        </li>
+                        <li class="service-list">
+                            <strong>Deep Learning</strong>
+                        </li>
+                        <li class="service-list">
+                            <strong>CNN Algorithm</strong>
+                        </li>
+                        <li class="service-list">
+                            <strong>Web Designing</strong>
+                        </li>
+<!--                        <li class="service-list">-->
+<!--                            <strong>Stationery (print)</strong>-->
+<!--                        </li>-->
+                    </ul>
+                </div>
+                <div class="col-md-3 wow animated zoomIn">
+                    <ul>
+                        <li class="service-list">
+                            <strong>Web Application</strong>
+                        </li>
+                        <li class="service-list">
+                            <strong>HTML</strong>
+                        </li>
+                        <li class="service-list">
+                            <strong>CSS</strong>
+                        </li>
+                        <li class="service-list">
+                            <strong>JS & BST</strong>
+                        </li>
+<!--                        <li class="service-list">-->
+<!--                            <strong>Stationery (print)</strong>-->
+<!--                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!-- our-service -->
+
+    <div class="section" id="CTA-1">
+        <div class="container">
+            <h2 class="white">What's in your mind?</h2>
+            <div class="text-center">
+<!--                <a class="btn btn-large btn-border" href="#contact">Contact us</a>-->
+            </div>
+        </div>
+    </div>
+
+  	<div class="content">
+  		<section class="clients-section">
+      <div class="container">
+
+      </div>
+  			<br>
+
+  		</section>
+      <br />
+  		<section class="include-contact">
+  			<div class="container ">
+<!--        <p class="text-center greyish">Want to include your company in the list?  <a class="btn btn-large btn-border" href="#contact">Contact us</a>-->
+        <br />
+	  			<h2 class="top-margin" >All they say</h2>
+            <hr>
+	  				<p class="lead top70">Your opinion is valuable to us.</p>
+<!--	  				<h3 class="top40">It makes us feel good to make you feel proud.</h3>-->
+	  			<ul>
+	  				<li class="col-md-6">
+	  					<blockquote class="wow animated fadeInLeft">
+                            <p> <b style="color:green">Abstract></b><br>
+Breast cancer is considered one of the primary causes of mortality among women aged 20–59 worldwide. Early detection and treatment can allow patients to have proper treatment and consequently reduce rate of morbidity of breast cancer. Research indicates that most experienced physicians can diagnose cancer with 79% accuracy while 91% correct diagnosis is achieved using deep learning techniques. In this paper, we present the most recent breast cancer detection and classification models that are deep learning based models by analyzing them in the form of comparative study. Also, in this paper, the datasets that are public for use and popular as well are listed in the recent work to facilitate any new experiments and comparisons. The comparative analysis shows that the recent highest accuracy models based on simple detection and the classification architectures are Convolutional Neural Network (CNN) and transfer learning model (MobileNet).	  						</p>
+	  							<footer class="client"> Keywords: CNN, transfer learning, breast cancer, deep learning.</footer>
+	  					</blockquote>
+	  				</li>
+
+	  				<li class="col-md-6">
+	  					<blockquote class="wow animated fadeInRight">
+                            <p> <b style="color:green">Objective</b><br>
+The main objective of this project is to perform the classification of breast cancer using deep learning based CNN and Transfer Learning techniques.	<br>
+                                <b style="color:green"> Vision & Mission of project work</b><br>
+Vision-To implement a computerized diagnosis of breast cancer which helps a person in saving their time and money without going to hospitals just for diagnosis.
+Mission-Implementing an algorithm that which helps in diagnosing a disease. CNN based transfer learning (MobileNet) algorithm is being used for this accurate classification.<br>
+                               <b style="color:green">Scope of project work</b> <br>
+Early diagnosis for preventing cancer death ratios. This methodology can also be utilized for other types of diseases other than the cancers for taking the precautions or for treatments in early stages.
+
+</p>
+<!--	  							<footer class="client"> MD, Founder of Company</footer>-->
+	  					</blockquote>
+	  				</li>
+	  			</ul><!-- /.testimonials -->
+  			</div><!-- /.container -->
+  		</section>
+
+  	  </div><!-- /.content -->
+
+
+
+        </div>
+    </div>
+
+<!--    <div class="section" id="branding">-->
+<!--        <div class="container">-->
+<!--            <h2>Project Implimentation</h2>-->
+<!--            <hr />-->
+<!--            <div class="row">-->
+<!--                <div class="col-sm-6 wow animated zoomIn" data-wow-delay=".3s">-->
+<!--                    <h4>1. We are Brilliant</h4>-->
+<!--                    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printerLorem Ipsum is simply dummy text of the .</p>  -->
+<!--                </div>-->
+<!--                <div class="col-sm-6 wow animated zoomIn" data-wow-delay=".3s">-->
+<!--                    <h4>2. We Are The Leader</h4>-->
+<!--                    <p> Lorem Ipsum is simply dummy text of t  <div class="section" id="banner-3">-->
+<!--        he printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printerLorem Ipsum is simply dummy text of the .</p> -->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <div class="col-sm-6 wow animated zoomIn" data-wow-delay=".3s">-->
+<!--                    <h4>3. We are the leader</h4>-->
+<!--                    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printerLorem Ipsum is simply dummy text of the .</p>-->
+<!--                </div>-->
+<!--                <div class="col-sm-6 wow animated zoomIn" data-wow-delay=".3s">-->
+<!--                    <h4>4. We are the best</h4>-->
+<!--                    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printerLorem Ipsum is simply dummy text of the .</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <div class="col-sm-6 wow animated zoomIn" data-wow-delay=".3s">-->
+<!--                    <h4>5. We are large</h4>-->
+<!--                    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printerLorem Ipsum is simply dummy text of the .</p>-->
+<!--                </div>-->
+<!--                <div class="col-sm-6 wow animated zoomIn" data-wow-delay=".3s">-->
+<!--                    <h4>6. We are a team</h4>-->
+<!--                    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printerLorem Ipsum is simply dummy text of the .</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div class="section" id="banner-4">
+        <div class="container">
+            <h2 class="white wow animated zoomIn" data-wow-delay="1s">Image <br />Clasification </h2>
+        </div>
+    </div>
+
+
+    <div class="section" id="contact">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+
+  		<div class="container">
+<!--            <h2 class="white">Image Classification </h2>-->
+                    <div class="col-sm-6 wow animated fadeInLeft">
+                        <input type="file" name="file"  required="required" class="form" placeholder="Choose image" />
+                    </div>
+                    <div class="col-sm-6 wow animated fadeInRight">
+                        <textarea name="message" id="message" class="form textarea"   placeholder="We can only upload image format files(.jpg, .png,.jpeg & .jfif), where no other file formats will not accepted.Deep learning is a technique that which mainly works for classification of any 2D and 3D type dataset." readonly></textarea>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" id="submit" name="submit" class="form-btn semibold">Upload Image</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+  	<script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/wow.min.js"></script>
+    <script src="static/js/classie.js"></script>
+  	<script>
+  	    function init() {
+  	        window.addEventListener('scroll', function(e){
+  	            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+  	                shrinkOn = 300,
+  	                header = document.querySelector("header");
+  	            if (distanceY > shrinkOn) {
+  	                classie.add(header,"smaller");
+  	            } else {
+  	                if (classie.has(header,"smaller")) {
+  	                    classie.remove(header,"smaller");
+  	                }
+  	            }
+  	        });
+  	    }
+  	    window.onload = init();
+  	</script>
+    <script type="text/javascript">
+     	new WOW().init();
+    </script>
+    <script type="text/javascript">
+        $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+
+    </script>
+</body>
+</html>
